@@ -1,10 +1,10 @@
-package com.frozen.springcloudzuul;
+package com.frozen.springcloudeureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringCloudZuulApplicationTests {
+class SpringCloudEurekaApplicationTests {
 
 	@Test
 	void contextLoads() {
