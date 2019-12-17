@@ -18,7 +18,8 @@
     </repositories>
     <description>springcloudfrozen</description>
     <modules>
-<!--        <module>spring-cloud-zuul</module>-->
+        <module>spring-cloud-zuul</module>
+        <module>spring-cloud-eureka</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
