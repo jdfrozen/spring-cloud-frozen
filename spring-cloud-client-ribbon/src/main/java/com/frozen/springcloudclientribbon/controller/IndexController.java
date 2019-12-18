@@ -1,10 +1,10 @@
-package com.frozen.springcloudserver.controller;
+package com.frozen.springcloudclientribbon.controller;
 
+import com.frozen.springcloudclientribbon.service.HelloService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,17 +16,17 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class IndexController {
 
-	@Value("${server.port}")
-	String port;
+	@Autowired
+	HelloService helloService;
 
     @RequestMapping(value = "index")
     public String index(){
         return "/index";
     }
 
-	@RequestMapping("/hi")
-	public String home(@RequestParam(value = "name", defaultValue = "forezp") String name) {
-		return "hi " + name + " ,i am from port:" + port;
+	@RequestMapping(value = "hello")
+	public String hello(){
+		return helloService.hiService("frozen");
 	}
 
 }
