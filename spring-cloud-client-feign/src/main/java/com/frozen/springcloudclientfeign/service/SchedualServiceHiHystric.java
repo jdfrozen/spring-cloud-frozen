@@ -14,4 +14,3 @@ public class SchedualServiceHiHystric implements SchedualServiceHi {
 		return "sorry "+name;
 	}
 }
-
