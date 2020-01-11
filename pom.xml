@@ -19,7 +19,14 @@
     <description>springcloudfrozen</description>
     <modules>
         <module>spring-cloud-zuul</module>
+        <module>spring-cloud-bus</module>
+        <module>spring-cloud-client</module>
+        <module>spring-cloud-client-feign</module>
+        <module>spring-cloud-client-ribbon</module>
+        <module>spring-cloud-config-server</module>
         <module>spring-cloud-eureka</module>
+        <module>spring-cloud-gateway</module>
+        <module>spring-cloud-server</module>
         <module>spring-boot-starter</module>
     </modules>
     <packaging>pom</packaging>
