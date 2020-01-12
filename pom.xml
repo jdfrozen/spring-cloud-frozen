@@ -26,6 +26,7 @@
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-gateway</module>
+        <module>spring-cloud-gateway-first</module>
         <module>spring-cloud-server</module>
         <module>spring-boot-starter</module>
     </modules>
