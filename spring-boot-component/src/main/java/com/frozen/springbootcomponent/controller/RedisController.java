@@ -1,6 +1,7 @@
 package com.frozen.springbootcomponent.controller;
 
 import com.frozen.springbootcomponent.po.User;
+import com.frozen.springbootcomponent.service.RedisDemoService;
 import com.frozen.springbootcomponent.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +22,12 @@ import java.util.List;
 @Slf4j
 public class RedisController {
     @Autowired
-    UserService userService;
+    RedisDemoService redisDemoService;
 
-    @RequestMapping(value = "/frozen")
+    @RequestMapping(value = "/redis")
     @ResponseBody
     public String getAllUser(){
-        List<User> list = userService.getAllUser();
-        log.info("allUser={}", Arrays.toString(list.toArray()));
-        return Arrays.toString(list.toArray());
+        return redisDemoService.helloWord();
     }
 
 }
