@@ -19,7 +19,7 @@ import org.springframework.util.CollectionUtils;
 
 @Component
 @Slf4j
-public final class RedisUtil {
+public final class RedisDao {
 
 	@Autowired
 	private RedisTemplate<String, Object> redisTemplate;

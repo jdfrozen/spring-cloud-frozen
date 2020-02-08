@@ -1,6 +1,6 @@
 package com.frozen.springbootcomponent.service;
 
-import com.frozen.springbootcomponent.dao.redis.RedisUtil;
+import com.frozen.springbootcomponent.dao.redis.RedisDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +12,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class RedisDemoService {
 	@Autowired
-	RedisUtil redisUtil;
+	RedisDao redisDao;
 
 	public String helloWord(){
 		String key = "frozen";
-		redisUtil.set(key,"success");
-		return (String) redisUtil.get(key);
+		redisDao.set(key,"success");
+		return (String) redisDao.get(key);
 	}
 }
